@@ -20,7 +20,7 @@
 
 
 ;; eim settings =================================================
-(add-to-list 'load-path "~/.emacs.d/elpa/eim-2011")
+(add-to-list 'load-path "~/.eplugins/eim")
 (autoload 'eim-use-package "eim" "Another Emacs input method")
 (setq eim-use-tooltip nil)
 
