@@ -19,7 +19,7 @@
 
 
 ;; eim settings =================================================
-(add-to-list 'load-path "~/.eplugins/eim")
+(add-to-list 'load-path "/home/noinil/.eplugins/eim")
 (autoload 'eim-use-package "eim" "Another Emacs input method")
 (setq eim-use-tooltip nil)
 
