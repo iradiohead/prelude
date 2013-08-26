@@ -12,7 +12,6 @@
 (global-linum-mode 1)
 
 ;; set font for all windows
-(setq face-font-rescale-alist '(("Microsoft Yahei" . 1.2) ("WenQuanYi Zen Hei" . 1.2)))
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
 
 ;; calendar start on Monday
