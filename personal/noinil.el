@@ -12,7 +12,7 @@
 (global-linum-mode 1)
 
 ;; set font for all windows
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+(add-to-list 'default-frame-alist '(font . "WenQuanYi Micro Hei Mono-10"))
 
 ;; calendar start on Monday
 (setq calendar-week-start-day 1)
