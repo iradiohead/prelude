@@ -5,6 +5,9 @@
 
 ;;; code:
 
+;; auto installation of packages
+(prelude-require-packages '(top-mode w3))
+
 ;; set line width
 (setq default-fill-column 80)
 
@@ -52,5 +55,6 @@
         (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
         (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)")))
 ;; org-mode settings =================================================
+
 
 ;;; noinil.el ends here
