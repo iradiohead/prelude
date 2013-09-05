@@ -9,7 +9,7 @@
 (prelude-require-packages '(top-mode w3 yasnippet))
 
 ;; set line width
-(setq default-fill-column 80)
+;; (setq default-fill-column 80)
 
 ;; set line number mode
 ;; (global-linum-mode 1)
