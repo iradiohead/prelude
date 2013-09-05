@@ -6,19 +6,19 @@
 ;;; code:
 
 ;; auto installation of packages
-(prelude-require-packages '(top-mode w3))
+(prelude-require-packages '(top-mode w3 yasnippet))
 
 ;; set line width
 (setq default-fill-column 80)
 
 ;; set line number mode
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 
 ;; set font for all windows
 (add-to-list 'default-frame-alist '(font . "WenQuanYi Micro Hei Mono-10"))
 
 ;; calendar start on Monday
-(setq calendar-week-start-day 1)
+;; (setq calendar-week-start-day 1)
 
 
 ;; eim settings =================================================
@@ -40,10 +40,10 @@
 
 
 ;; erc settings =================================================
-(setq erc-email-userid "noinil@gmail.com")
-(setq erc-nick "oinil")
-(setq erc-nick-uniquifier "_nil")
-(setq erc-server "irc.freenode.net")
+;; (setq erc-email-userid "noinil@gmail.com")
+;; (setq erc-nick "oinil")
+;; (setq erc-nick-uniquifier "_nil")
+;; (setq erc-server "irc.freenode.net")
 ;; erc settings =================================================
 
 
