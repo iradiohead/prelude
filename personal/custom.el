@@ -23,7 +23,7 @@
  '(erc-modules (quote (autojoin button completion fill irccontrols list match menu move-to-prompt netsplit networks noncommands notify readonly ring services smiley stamp spelling track truncate)))
  '(erc-nick "oinil")
  '(erc-nickserv-passwords (quote ((freenode (("oinil" . "oionillingig"))))))
- '(erc-prompt "$ ERC  =~~~~>")
+ '(erc-prompt "$ ERC =~~~~>")
  '(erc-prompt-for-nickserv-password nil)
  '(erc-prompt-for-password nil)
  '(erc-server "irc.freenode.net")
