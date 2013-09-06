@@ -6,10 +6,21 @@
 ;;; code:
 
 ;; auto installation of packages
-(prelude-require-packages '(top-mode w3 yasnippet))
+(prelude-require-packages '(top-mode w3m yasnippet))
 
-;; set font for all windows
-(add-to-list 'default-frame-alist '(font . "WenQuanYi Micro Hei Mono-10"))
+
+;; set frame title
+(setq frame-title-format
+      '("" invocation-name " :: noinil@gmail.com :: Cheng Tan :: - " (:eval (if (buffer-file-name)
+                                                    (abbreviate-file-name (buffer-file-name))
+                                                  "%b"))))
+
+
+;; set fontset and font
+(create-fontset-from-fontset-spec
+ "-unknown-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
+(set-fontset-font "fontset-myfontset" 'han "WenQuanYi Micro Hei Mono")
+(add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
 
 
 ;; eim settings =================================================
