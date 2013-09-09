@@ -6,7 +6,7 @@
 ;;; code:
 
 ;; auto installation of packages
-(prelude-require-packages '(top-mode w3m yasnippet))
+(prelude-require-packages '(top-mode w3m yasnippet dired+))
 
 
 ;; set frame title
@@ -23,6 +23,25 @@
 (add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
 
 
+;; dired mode settings ==========================================
+;; use dired+ mode instead of dired
+(require 'dired+)
+
+;; redefine keys
+(defun noinil-dired-mode-keys ()
+  "Modify keymaps used by `dired+-mode'."
+  (local-set-key (kbd "C-n") 'dired-next-line)
+  (local-set-key (kbd "C-p") 'dired-previous-line)
+
+  ;; (local-set-key (kbd "C-c C-p") nil) ; remove a key
+
+    ;; …
+  )
+
+;; add to dired-mode-hook
+(add-hook 'dired-mode-hook 'noinil-dired-mode-keys)
+;;  =================================================
+
 ;; eim settings =================================================
 (add-to-list 'load-path "/home/noinil/.eplugins/eim")
 (autoload 'eim-use-package "eim" "Another Emacs input method")
@@ -38,7 +57,7 @@
 ;; 用 ; 暂时输入英文
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
-;; eim settings =================================================
+;;  =================================================
 
 
 ;; org-mode settings =================================================
@@ -48,7 +67,7 @@
         (sequence "SUBMITTED(s!)" "REVISION(v)" "|" "ACCEPTED(a!)" "PUBLISHED(p!)")
         (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
         (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)")))
-;; org-mode settings =================================================
+;;  =================================================
 
 
 ;;; noinil.el ends here
