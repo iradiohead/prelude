@@ -50,7 +50,7 @@
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
- '(italic ((t (:underline t :slant italic))))
+ '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :foreground "yellow" :weight ultra-bold :height 1.2))))
  '(org-level-2 ((t (:inherit outline-2 :foreground "OrangeRed1" :height 1.1)))))
