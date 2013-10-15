@@ -38,7 +38,7 @@
  '(fill-column 80)
  '(global-linum-mode t)
  '(global-visual-line-mode t)
- '(org-agenda-files (quote ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org")))
+ '(org-agenda-files (quote ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
  '(track-eol t))
 
 (custom-set-faces
