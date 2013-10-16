@@ -8,7 +8,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode)))
+ '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)) t)
  '(calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"])
  '(calendar-chinese-location-name "南京")
  '(calendar-chinese-terrestrial-branch ["子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥"])
@@ -39,6 +39,9 @@
  '(fill-column 80)
  '(global-linum-mode t)
  '(global-visual-line-mode t)
+ '(minimap-always-recenter t)
+ '(minimap-width-fraction 0.15)
+ '(minimap-window-location (quote right))
  '(org-agenda-files (quote ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
  '(track-eol t))
 
@@ -67,7 +70,12 @@
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
+ '(minimap-active-region-background ((t (:background "dark slate gray"))))
  '(org-level-1 ((t (:inherit outline-1 :foreground "yellow" :weight ultra-bold :height 1.2))) t)
- '(org-level-2 ((t (:inherit outline-2 :foreground "OrangeRed1" :height 1.1))) t))
+ '(org-level-2 ((t (:inherit outline-2 :foreground "OrangeRed1" :height 1.1))) t)
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "dark orange"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "brown"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "deep pink")))))
 
 ;;; custom.el ends here
