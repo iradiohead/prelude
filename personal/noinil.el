@@ -91,6 +91,17 @@ noinil@gmail.com :: Cheng Tan ::
         (sequence "SUBMITTED(s!)" "REVISION(v)" "|" "ACCEPTED(a!)" "PUBLISHED(p!)")
         (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
         (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)")))
+(setq org-default-notes-file "~/Org/notes.org")
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
+         "* TODO %?\n %i\n %a \n \n")
+        ("i" "Idea" entry (file+headline "~/Org/notes.org" "Projects")
+         "* %?\nEntered on %U\n %i\n %a \n \n")
+        ("m" "Motive" entry (file+headline "~/Org/notes.org" "Learning")
+         "* %?\nEntered on %U\n %i\n %a \n \n")
+        ("j" "Journal" entry (file+datetree "~/Org/journal.org")
+         "** %?\nEntered on %T\n %i\n %a \n \n")))
 ;; =============================================================================
 
 
