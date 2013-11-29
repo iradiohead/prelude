@@ -6,7 +6,7 @@
 ;;; code:
 
 ;; auto installation of packages ===============================================
-(prelude-require-packages '(top-mode w3m yasnippet dired+ minimap top-mode))
+(prelude-require-packages '(top-mode w3m yasnippet dired+ minimap auto-complete))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -102,6 +102,57 @@ noinil@gmail.com :: Cheng Tan ::
          "* %?\nEntered on %U\n %i\n %a \n \n")
         ("j" "Journal" entry (file+datetree "~/Org/journal.org")
          "** %?\nEntered on %T\n %i\n %a \n \n")))
+;; =============================================================================
+
+
+;; auto-complete mode settings =================================================
+;;              _                                        _      _
+;;   __ _ _   _| |_ ___         ___ ___  _ __ ___  _ __ | | ___| |_ ___
+;;  / _` | | | | __/ _ \ _____ / __/ _ \| '_ ` _ \| '_ \| |/ _ \ __/ _ \
+;; | (_| | |_| | || (_) |_____| (_| (_) | | | | | | |_) | |  __/ ||  __/
+;;  \__,_|\__,_|\__\___/       \___\___/|_| |_| |_| .__/|_|\___|\__\___|
+;;                                                |_|
+;;
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ac-auto-start 4)
+(setq ac-auto-show-menu 0.8)
+(setq ac-menu-height 16)
+(ac-set-trigger-key "TAB")
+
+;; Personal sources.
+;; Cheng Tan, 2013.
+
+(defun ac-ct-cpp-candidates ()
+  "Define my c++ ac-sources."
+  '("vector" "string"))
+
+(defvar ac-source-ct-cpp
+  '((candidates . ac-ct-cpp-candidates)))
+
+(add-hook 'c++-mode-hook (lambda ()
+                           (add-to-list 'ac-sources 'ac-source-ct-cpp)))
+;; =============================================================================
+
+
+;; yasnippet settings===========================================================
+;;
+;;  _   _  __ _ ___ _ __ (_)_ __  _ __   ___| |_
+;; | | | |/ _` / __| '_ \| | '_ \| '_ \ / _ \ __|
+;; | |_| | (_| \__ \ | | | | |_) | |_) |  __/ |_
+;;  \__, |\__,_|___/_| |_|_| .__/| .__/ \___|\__|
+;;  |___/                  |_|   |_|
+;;
+(require 'yasnippet)
+;; (setq yas-snippet-dirs
+;;       '("~/.eplugins/snippets"            ;; personal snippets
+;;         ;; "/path/to/some/collection/"      ;; just some foo-mode snippets
+;;         ;; "/path/to/some/othercollection/" ;; some more foo-mode and a complete baz-mod
+;;         "~/.emacs.d/elpa/yasnippet-\*/snippets";; the default collection
+;;         ))
+(setcar yas-snippet-dirs "~/.eplugins/snippets")
+(yas-global-mode 1)
 ;; =============================================================================
 
 
