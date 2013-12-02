@@ -6,7 +6,8 @@
 ;;; code:
 
 ;; auto installation of packages ===============================================
-(prelude-require-packages '(top-mode w3m yasnippet dired+ minimap auto-complete))
+(prelude-require-packages '(top-mode w3m yasnippet dired+ minimap
+auto-complete tabbar-ruler))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -148,12 +149,26 @@ noinil@gmail.com :: Cheng Tan ::
 ;; (setq yas-snippet-dirs
 ;;       '("~/.eplugins/snippets"            ;; personal snippets
 ;;         ;; "/path/to/some/collection/"      ;; just some foo-mode snippets
-;;         ;; "/path/to/some/othercollection/" ;; some more foo-mode and a complete baz-mod
 ;;         "~/.emacs.d/elpa/yasnippet-\*/snippets";; the default collection
 ;;         ))
 (setcar yas-snippet-dirs "~/.eplugins/snippets")
 (yas-global-mode 1)
 ;; =============================================================================
 
+
+;; tabbar-ruler settings========================================================
+;;  _        _     _                                     _
+;; | |_ __ _| |__ | |__   __ _ _ __           _ __ _   _| | ___ _ __
+;; | __/ _` | '_ \| '_ \ / _` | '__|  _____  | '__| | | | |/ _ \ '__|
+;; | || (_| | |_) | |_) | (_| | |    |_____| | |  | |_| | |  __/ |
+;;  \__\__,_|_.__/|_.__/ \__,_|_|            |_|   \__,_|_|\___|_|
+;;
+(setq tabbar-ruler-global-tabbar t) ; If you want tabbar
+(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
+;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
+;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
+;; (setq tabbar-ruler-popup-scrollbar t) ;
+(require 'tabbar-ruler)
+;; =============================================================================
 
 ;;; noinil.el ends here
