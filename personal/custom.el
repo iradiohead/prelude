@@ -46,6 +46,7 @@
  '(org-archive-location "~/Org/archive.org::* From %s")
  '(org-directory "~/Org")
  '(org-refile-targets (quote (("~/Org/someday.org" :maxlevel . 2) ("~/Org/gtd.org" :maxlevel . 2))))
+ '(smartparens-global-mode t)
  '(track-eol t))
 
 (custom-set-faces
