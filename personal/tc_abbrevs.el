@@ -75,7 +75,16 @@
     ("6smly" "☺")
 
     ;; biophysics
+    ("6ff" "force field")
+    ("6fel" "free energy landscape")
+    ("6fes" "free energy surface")
     ("6mtd" "metadynamics")
+    ("6cv" "collective variable")
+    ("6cc" "conformational changes")
+    ("6MDs" "MD simulations")
+    ("6MD" "molecular dynamics")
+    ("6cg" "coarse-grained")
+    ("6pca" "principle component analysis")
     ;; =========================================================================
 
     ;; emacs regex =============================================================
