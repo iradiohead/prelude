@@ -7,7 +7,7 @@
 
 ;; auto installation of packages ===============================================
 (prelude-require-packages '(top-mode w3m yasnippet dired+ minimap
-auto-complete tabbar-ruler))
+auto-complete tabbar-ruler page-break-lines))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
