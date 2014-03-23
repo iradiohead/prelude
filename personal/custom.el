@@ -38,6 +38,7 @@
  '(erc-warn-about-blank-lines t)
  '(fill-column 80)
  '(global-linum-mode t)
+ '(global-page-break-lines-mode t)
  '(global-visual-line-mode t)
  '(minimap-always-recenter t)
  '(minimap-width-fraction 0.15)
