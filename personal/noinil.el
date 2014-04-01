@@ -17,13 +17,11 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; set frame title =============================================================
-(setq frame-title-format '("" invocation-name " ::
-noinil@gmail.com :: Cheng Tan ::
-- " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
+(setq frame-title-format '("" invocation-name " :: noinil@gmail.com :: Cheng Tan :: - " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;; set fontset and font ========================================================
 (create-fontset-from-fontset-spec
- "-unknown-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
+ "-unknown-DejaVu Sans Mono-normal-normal-normal-*-11-*-*-*-m-0-fontset-myfontset")
 (set-fontset-font "fontset-myfontset" 'han "WenQuanYi Micro Hei Mono")
 (add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
 
