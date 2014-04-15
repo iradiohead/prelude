@@ -7,11 +7,12 @@
 
 ;; auto installation of packages ===============================================
 (prelude-require-packages
- '(top-mode w3m yasnippet dired+ minimap
-            auto-complete tabbar-ruler page-break-lines emms))
+ '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
+            page-break-lines emms gnuplot gnuplot-mode))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
+(add-to-list 'auto-mode-alist '("\\.gp\\'" . gnuplot-mode))
 
 ;; mode-hook ===================================================================
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -107,6 +108,25 @@ noinil@gmail.com :: Cheng Tan ::
 ;; =============================================================================
 
 
+;; yasnippet settings===========================================================
+;;
+;;  _   _  __ _ ___ _ __ (_)_ __  _ __   ___| |_
+;; | | | |/ _` / __| '_ \| | '_ \| '_ \ / _ \ __|
+;; | |_| | (_| \__ \ | | | | |_) | |_) |  __/ |_
+;;  \__, |\__,_|___/_| |_|_| .__/| .__/ \___|\__|
+;;  |___/                  |_|   |_|
+;;
+(require 'yasnippet)
+;; (setq yas-snippet-dirs
+;;       '("~/.eplugins/snippets"            ;; personal snippets
+;;         ;; "/path/to/some/collection/"      ;; just some foo-mode snippets
+;;         "~/.emacs.d/elpa/yasnippet-\*/snippets";; the default collection
+;;         ))
+(setcar yas-snippet-dirs "~/.eplugins/snippets")
+(yas-global-mode 1)
+;; =============================================================================
+
+
 ;; auto-complete mode settings =================================================
 ;;              _                                        _      _
 ;;   __ _ _   _| |_ ___         ___ ___  _ __ ___  _ __ | | ___| |_ ___
@@ -135,25 +155,12 @@ noinil@gmail.com :: Cheng Tan ::
 
 (add-hook 'c++-mode-hook (lambda ()
                            (add-to-list 'ac-sources 'ac-source-ct-cpp)))
-;; =============================================================================
 
-
-;; yasnippet settings===========================================================
-;;
-;;  _   _  __ _ ___ _ __ (_)_ __  _ __   ___| |_
-;; | | | |/ _` / __| '_ \| | '_ \| '_ \ / _ \ __|
-;; | |_| | (_| \__ \ | | | | |_) | |_) |  __/ |_
-;;  \__, |\__,_|___/_| |_|_| .__/| .__/ \___|\__|
-;;  |___/                  |_|   |_|
-;;
-(require 'yasnippet)
-;; (setq yas-snippet-dirs
-;;       '("~/.eplugins/snippets"            ;; personal snippets
-;;         ;; "/path/to/some/collection/"      ;; just some foo-mode snippets
-;;         "~/.emacs.d/elpa/yasnippet-\*/snippets";; the default collection
-;;         ))
-(setcar yas-snippet-dirs "~/.eplugins/snippets")
-(yas-global-mode 1)
+;; latex-mode
+(add-to-list 'ac-modes 'latex-mode)
+(defun ac-latex-mode-setup()
+  (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
+(add-hook 'latex-mode-hook 'ac-latex-mode-setup)
 ;; =============================================================================
 
 
@@ -186,7 +193,7 @@ noinil@gmail.com :: Cheng Tan ::
 
 
 
-;; smartparens mode settings ==================================================
+;; smartparens mode settings ===================================================
 ;;   ___ _ __ ___  _ __ ___  ___
 ;;  / _ \ '_ ` _ \| '_ ` _ \/ __|
 ;; |  __/ | | | | | | | | | \__ \
@@ -232,5 +239,15 @@ noinil@gmail.com :: Cheng Tan ::
             (toggle-truncate-lines 1)))
 ;; =============================================================================
 
+;; gnuplot mode settings =======================================================
+;;                          _       _
+;;   __ _ _ __  _   _ _ __ | | ___ | |_
+;;  / _` | '_ \| | | | '_ \| |/ _ \| __|
+;; | (_| | | | | |_| | |_) | | (_) | |_
+;;  \__, |_| |_|\__,_| .__/|_|\___/ \__|
+;;  |___/            |_|
+;;
+(require 'gnuplot-mode)
+;; =============================================================================
 
 ;;; noinil.el ends here
