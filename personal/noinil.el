@@ -8,7 +8,7 @@
 ;; auto installation of packages ===============================================
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
-            page-break-lines emms gnuplot gnuplot-mode))
+            page-break-lines emms gnuplot gnuplot-mode hideshow-org))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -249,5 +249,26 @@ noinil@gmail.com :: Cheng Tan ::
 ;;
 (require 'gnuplot-mode)
 ;; =============================================================================
+
+;; hide-show settings ==========================================================
+;;  _     _     _            _
+;; | |__ (_) __| | ___   ___| |__   _____      __
+;; | '_ \| |/ _` |/ _ \ / __| '_ \ / _ \ \ /\ / /
+;; | | | | | (_| |  __/ \__ \ | | | (_) \ V  V /
+;; |_| |_|_|\__,_|\___| |___/_| |_|\___/ \_/\_/
+;;
+;; hs-minor-mode ---------------------------------------------------------------
+(add-hook 'c-mode-hook 'hs-minor-mode)
+(add-hook 'c++-mode-hook 'hs-minor-mode)
+(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
+(add-hook 'lisp-mode-hook 'hs-minor-mode)
+(add-hook 'sh-mode-hook 'hs-minor-mode)
+(add-hook 'python-mode-hook 'hs-minor-mode)
+
+;; hs-org mode -----------------------------------------------------------------
+(require 'hideshow-org)
+(global-set-key "\C-c@h" 'hs-org/minor-mode)
+;; =============================================================================
+
 
 ;;; noinil.el ends here
