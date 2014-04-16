@@ -14,6 +14,7 @@
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.gp\\'" . gnuplot-mode))
+(add-to-list 'auto-mode-alist '("\\.pdf\\'" . hexl-mode))
 
 ;; mode-hook ===================================================================
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
