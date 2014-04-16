@@ -8,7 +8,8 @@
 ;; auto installation of packages ===============================================
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
-            page-break-lines emms gnuplot gnuplot-mode hideshow-org))
+            page-break-lines emms gnuplot gnuplot-mode hideshow-org
+            google-translate))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -265,9 +266,34 @@ noinil@gmail.com :: Cheng Tan ::
 (add-hook 'sh-mode-hook 'hs-minor-mode)
 (add-hook 'python-mode-hook 'hs-minor-mode)
 
+(add-hook 'c-mode-hook 'hs-org/minor-mode)
+(add-hook 'c++-mode-hook 'hs-org/minor-mode)
+(add-hook 'emacs-lisp-mode-hook 'hs-org/minor-mode)
+(add-hook 'lisp-mode-hook 'hs-org/minor-mode)
+(add-hook 'sh-mode-hook 'hs-org/minor-mode)
+(add-hook 'python-mode-hook 'hs-org/minor-mode)
+
 ;; hs-org mode -----------------------------------------------------------------
 (require 'hideshow-org)
 (global-set-key "\C-c@h" 'hs-org/minor-mode)
+;; =============================================================================
+
+;; Google translation ==========================================================
+;;                          _        _                       _       _
+;;   __ _  ___   ___   __ _| | ___  | |_ _ __ __ _ _ __  ___| | __ _| |_ ___
+;;  / _` |/ _ \ / _ \ / _` | |/ _ \ | __| '__/ _` | '_ \/ __| |/ _` | __/ _ \
+;; | (_| | (_) | (_) | (_| | |  __/ | |_| | | (_| | | | \__ \ | (_| | ||  __/
+;;  \__, |\___/ \___/ \__, |_|\___|  \__|_|  \__,_|_| |_|___/_|\__,_|\__\___|
+;;  |___/             |___/
+;;
+(require 'google-translate)
+(require 'google-translate-default-ui)
+(global-set-key (kbd "C-c C-q q") 'google-translate-at-point)
+(global-set-key (kbd "C-c C-q e") 'google-translate-query-translate)
+(global-set-key (kbd "C-c C-q w") 'google-translate-at-point-reverse)
+(global-set-key (kbd "C-c C-q s") 'google-translate-smooth-translate)
+(setq google-translate-default-source-language "en")
+(setq google-translate-default-target-language "zh-CN")
 ;; =============================================================================
 
 
