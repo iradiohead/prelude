@@ -289,10 +289,10 @@ noinil@gmail.com :: Cheng Tan ::
 ;;
 (require 'google-translate)
 (require 'google-translate-default-ui)
-(global-set-key (kbd "C-c C-q q") 'google-translate-at-point)
-(global-set-key (kbd "C-c C-q e") 'google-translate-query-translate)
-(global-set-key (kbd "C-c C-q w") 'google-translate-at-point-reverse)
-(global-set-key (kbd "C-c C-q s") 'google-translate-smooth-translate)
+(global-set-key (kbd "C-c x q") 'google-translate-at-point)
+(global-set-key (kbd "C-c x e") 'google-translate-query-translate)
+(global-set-key (kbd "C-c x w") 'google-translate-at-point-reverse)
+(global-set-key (kbd "C-c x s") 'google-translate-smooth-translate)
 (setq google-translate-default-source-language "en")
 (setq google-translate-default-target-language "zh-CN")
 ;; =============================================================================
