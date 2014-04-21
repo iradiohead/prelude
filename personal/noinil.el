@@ -139,10 +139,11 @@ noinil@gmail.com :: Cheng Tan ::
 ;;
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (require 'auto-complete-config)
+;; (require 'auto-complete-clang)
 (ac-config-default)
-(setq ac-auto-start 4)
-(setq ac-auto-show-menu 0.8)
-(setq ac-menu-height 16)
+(setq ac-auto-start 2)
+(setq ac-auto-show-menu 0.6)
+(setq ac-menu-height 10)
 (ac-set-trigger-key "TAB")
 
 ;; Personal sources.
@@ -158,11 +159,30 @@ noinil@gmail.com :: Cheng Tan ::
 (add-hook 'c++-mode-hook (lambda ()
                            (add-to-list 'ac-sources 'ac-source-ct-cpp)))
 
+;; (add-hook 'c++-mode-hook (lambda () (add-to-list 'ac-sources
+;;                            '(ac-source-ct-cpp ac-source-clang))))
+
 ;; latex-mode
 (add-to-list 'ac-modes 'latex-mode)
 (defun ac-latex-mode-setup()
   (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
 (add-hook 'latex-mode-hook 'ac-latex-mode-setup)
+;; -----------------------------------------------------------------------------
+
+;; ac-etags
+(custom-set-variables '(ac-etags-requires 1))
+
+(eval-after-load "etags"
+  '(progn
+     (ac-etags-setup)))
+
+(defun ct/c-mode-common-hook ()
+  (add-to-list 'ac-sources 'ac-source-etags))
+
+(add-hook 'c-mode-common-hook 'ct/c-mode-common-hook)
+(add-hook 'c++-mode-hook 'ct/c-mode-common-hook)
+(add-hook 'f90-mode-hook 'ct/c-mode-common-hook)
+
 ;; =============================================================================
 
 
