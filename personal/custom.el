@@ -9,6 +9,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)))
+ '(ac-etags-requires 1)
  '(calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"])
  '(calendar-chinese-location-name "南京")
  '(calendar-chinese-terrestrial-branch ["子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥"])
@@ -74,6 +75,7 @@
  '(erc-my-nick-face ((t (:foreground "lime green" :weight ultra-bold))))
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
+ '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
  '(font-latex-math-face ((t (:foreground "orange red"))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
  '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))))

@@ -164,8 +164,9 @@ noinil@gmail.com :: Cheng Tan ::
 
 ;; latex-mode
 (add-to-list 'ac-modes 'latex-mode)
-(defun ac-latex-mode-setup()
-  (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
+(defun ac-latex-mode-setup ()
+  "Define ac-sources for my-latex-mode."
+  (add-to-list 'ac-sources '(ac-source-yasnippet)))
 (add-hook 'latex-mode-hook 'ac-latex-mode-setup)
 ;; -----------------------------------------------------------------------------
 
@@ -177,6 +178,7 @@ noinil@gmail.com :: Cheng Tan ::
      (ac-etags-setup)))
 
 (defun ct/c-mode-common-hook ()
+  "Define etag sources for ac in c or cpp modes."
   (add-to-list 'ac-sources 'ac-source-etags))
 
 (add-hook 'c-mode-common-hook 'ct/c-mode-common-hook)
