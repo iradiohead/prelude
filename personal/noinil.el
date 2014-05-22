@@ -9,7 +9,7 @@
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
             page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate))
+            google-translate ac-etags))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
