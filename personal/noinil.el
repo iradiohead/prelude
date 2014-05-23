@@ -289,12 +289,12 @@ noinil@gmail.com :: Cheng Tan ::
 (add-hook 'sh-mode-hook 'hs-minor-mode)
 (add-hook 'python-mode-hook 'hs-minor-mode)
 
-(add-hook 'c-mode-hook 'hs-org/minor-mode)
-(add-hook 'c++-mode-hook 'hs-org/minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-org/minor-mode)
-(add-hook 'lisp-mode-hook 'hs-org/minor-mode)
-(add-hook 'sh-mode-hook 'hs-org/minor-mode)
-(add-hook 'python-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'c-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'c++-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'emacs-lisp-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'lisp-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'sh-mode-hook 'hs-org/minor-mode)
+;; (add-hook 'python-mode-hook 'hs-org/minor-mode)
 
 ;; hs-org mode -----------------------------------------------------------------
 (require 'hideshow-org)
