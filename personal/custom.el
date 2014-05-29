@@ -8,7 +8,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)))
+ '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)) t)
  '(ac-etags-requires 1)
  '(calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"])
  '(calendar-chinese-location-name "南京")
@@ -76,9 +76,9 @@
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
  '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
- '(font-latex-math-face ((t (:foreground "orange red"))))
- '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
- '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))))
+ '(font-latex-math-face ((t (:foreground "orange red"))) t)
+ '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))) t)
+ '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))) t)
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
@@ -94,9 +94,9 @@
  '(rainbow-delimiters-depth-2-face ((t (:foreground "dark orange"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "blue"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "dark khaki"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "magenta"))))
- '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold))) t))
+ '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold)))))
 
 ;;; custom.el ends here
