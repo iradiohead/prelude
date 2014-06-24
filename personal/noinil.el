@@ -9,7 +9,7 @@
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
             page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate ac-etags))
+            google-translate ac-etags indent-guide))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -319,5 +319,16 @@ noinil@gmail.com :: Cheng Tan ::
 (setq google-translate-default-target-language "zh-CN")
 ;; =============================================================================
 
+;; indent guide ================================================================
+;;  _           _            _                 _     _
+;; (_)_ __   __| | ___ _ __ | |_    __ _ _   _(_) __| | ___
+;; | | '_ \ / _` |/ _ \ '_ \| __|  / _` | | | | |/ _` |/ _ \
+;; | | | | | (_| |  __/ | | | |_  | (_| | |_| | | (_| |  __/
+;; |_|_| |_|\__,_|\___|_| |_|\__|  \__, |\__,_|_|\__,_|\___|
+;;                                 |___/
+(require 'indent-guide)
+(indent-guide-global-mode)
+(set-face-foreground 'indent-guide-face "cyan")
+;; =============================================================================
 
 ;;; noinil.el ends here
