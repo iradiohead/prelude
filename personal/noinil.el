@@ -100,13 +100,15 @@ noinil@gmail.com :: Cheng Tan ::
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
-         "* TODO %?\n %i\n %a \n \n")
+         "* TODO %?\n %i\n %a \n \n \n")
         ("i" "Idea" entry (file+headline "~/Org/notes.org" "Projects")
-         "* %?\nEntered on %U\n %i\n %a \n \n")
-        ("m" "Motive" entry (file+headline "~/Org/notes.org" "Learning")
-         "* %?\nEntered on %U\n %i\n %a \n \n")
+         "* %?\nEntered on %U\n %i\n %a \n \n \n")
+        ("m" "Motive" entry (file+headline "~/Org/notes.org" "Entertainment")
+         "* %?\nEntered on %U\n %i\n %a \n \n \n")
+        ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
+         "* %?\nEntered on %U\n %i\n %a \n \n \n")
         ("j" "Journal" entry (file+datetree "~/Org/journal.org")
-         "** %?\nEntered on %T\n %i\n %a \n \n")))
+         "** %?\nEntered on %T\n %i\n %a \n \n \n")))
 ;; =============================================================================
 
 
