@@ -9,7 +9,7 @@
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
             page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate ac-etags indent-guide))
+            google-translate ac-etags indent-guide figlet))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -103,7 +103,7 @@ noinil@gmail.com :: Cheng Tan ::
          "* TODO %?\n %i\n %a \n \n \n")
         ("i" "Idea" entry (file+headline "~/Org/notes.org" "Projects")
          "* %?\nEntered on %U\n %i\n %a \n \n \n")
-        ("m" "Motive" entry (file+headline "~/Org/notes.org" "Entertainment")
+        ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainment")
          "* %?\nEntered on %U\n %i\n %a \n \n \n")
         ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
          "* %?\nEntered on %U\n %i\n %a \n \n \n")
@@ -331,6 +331,16 @@ noinil@gmail.com :: Cheng Tan ::
 (require 'indent-guide)
 (indent-guide-global-mode)
 (set-face-foreground 'indent-guide-face "cyan")
+;; =============================================================================
+
+;; figlet ======================================================================
+;;   __ _      _     _
+;;  / _(_)__ _| |___| |_
+;; |  _| / _` | / -_)  _|
+;; |_| |_\__, |_\___|\__|
+;;       |___/
+;;
+(require 'figlet)
 ;; =============================================================================
 
 ;;; noinil.el ends here
