@@ -9,7 +9,7 @@
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
             page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate ac-etags indent-guide figlet))
+            google-translate ac-etags indent-guide figlet fold-this))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -341,6 +341,28 @@ noinil@gmail.com :: Cheng Tan ::
 ;;       |___/
 ;;
 (require 'figlet)
+;; =============================================================================
+
+;; =============================================================================
+;;   __       _     _   _   _     _
+;;  / _| ___ | | __| | | |_| |__ (_)___
+;; | |_ / _ \| |/ _` | | __| '_ \| / __|
+;; |  _| (_) | | (_| | | |_| | | | \__ \
+;; |_|  \___/|_|\__,_|  \__|_| |_|_|___/
+;;
+(require 'fold-this)
+
+;; redefine keys
+(defun noinil-fold-this-keys ()
+  "Modify keymaps used by `fold-this'."
+  (local-set-key (kbd "C-c C-f") 'fold-this-all)
+  (local-set-key (kbd "C-c C-F") 'fold-this)
+  (local-set-key (kbd "C-c M-f") 'fold-this-unfold-all)
+  )
+
+;; add to dired-mode-hook
+(add-hook 'c++-mode-hook 'noinil-fold-this-keys)
+;;
 ;; =============================================================================
 
 ;;; noinil.el ends here
