@@ -9,7 +9,8 @@
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
             page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate ac-etags indent-guide figlet fold-this))
+            google-translate ac-etags indent-guide figlet fold-this
+            highlight-indentation))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -332,6 +333,30 @@ noinil@gmail.com :: Cheng Tan ::
 (indent-guide-global-mode)
 (set-face-foreground 'indent-guide-face "cyan")
 ;; =============================================================================
+
+;; highlight indentation =======================================================
+;;  _     _       _     _ _       _     _
+;; | |__ (_) __ _| |__ | (_) __ _| |__ | |_
+;; | '_ \| |/ _` | '_ \| | |/ _` | '_ \| __|
+;; | | | | | (_| | | | | | | (_| | | | | |_
+;; |_| |_|_|\__, |_| |_|_|_|\__, |_| |_|\__|
+;;          |___/           |___/
+;;  _           _            _        _   _
+;; (_)_ __   __| | ___ _ __ | |_ __ _| |_(_) ___  _ __
+;; | | '_ \ / _` |/ _ \ '_ \| __/ _` | __| |/ _ \| '_ \
+;; | | | | | (_| |  __/ | | | || (_| | |_| | (_) | | | |
+;; |_|_| |_|\__,_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
+;;
+(require 'highlight-indentation)
+(add-hook 'c-mode-hook 'highlight-indentation-mode)
+(add-hook 'c++-mode-hook 'highlight-indentation-mode)
+(add-hook 'emacs-lisp-mode-hook 'highlight-indentation-mode)
+(add-hook 'lisp-mode-hook 'highlight-indentation-mode)
+(add-hook 'sh-mode-hook 'highlight-indentation-mode)
+(add-hook 'python-mode-hook 'highlight-indentation-mode)
+(set-face-background 'highlight-indentation-face "#454945")
+;; =============================================================================
+
 
 ;; figlet ======================================================================
 ;;   __ _      _     _
