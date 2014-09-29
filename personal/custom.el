@@ -8,7 +8,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)) t)
+ '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)))
  '(ac-etags-requires 1)
  '(calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"])
  '(calendar-chinese-location-name "南京")
@@ -16,6 +16,7 @@
  '(calendar-latitude 32.060255)
  '(calendar-longitude 118.796877)
  '(calendar-week-start-day 1)
+ '(column-number-mode t)
  '(erc-autojoin-channels-alist (quote (("freenode" "#archlinux-cn" "#emacs" "#rubik" "#physics"))))
  '(erc-autojoin-mode t)
  '(erc-autojoin-timing (quote ident))
@@ -50,7 +51,9 @@
  '(org-archive-location "~/Org/archive.org::* From %s")
  '(org-directory "~/Org")
  '(org-refile-targets (quote (("~/Org/someday.org" :maxlevel . 2) ("~/Org/gtd.org" :maxlevel . 2))))
+ '(size-indication-mode t)
  '(smartparens-global-mode t)
+ '(tool-bar-mode nil)
  '(track-eol t))
 
 (custom-set-faces
@@ -76,9 +79,9 @@
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
  '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
- '(font-latex-math-face ((t (:foreground "orange red"))) t)
- '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))) t)
- '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))) t)
+ '(font-latex-math-face ((t (:foreground "orange red"))))
+ '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
+ '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))))
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
