@@ -24,9 +24,9 @@
 (setq frame-title-format '("" invocation-name " :: noinil@gmail.com :: Cheng Tan :: - " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;; set fontset and font ========================================================
-(create-fontset-from-fontset-spec "-apple-Inconsolata-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
-(set-fontset-font "fontset-myfontset" 'han "Kaiti SC")
-(add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
+;; (create-fontset-from-fontset-spec "-apple-Inconsolata-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
+;; (set-fontset-font "fontset-myfontset" 'han "Kaiti SC")
+;; (add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
 
 ;; auto-load files =============================================================
 
