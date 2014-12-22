@@ -395,6 +395,7 @@
 (add-to-list 'load-path "~/.eplugins/cafemol-mode/")
 (require 'cafemol-mode)
 (add-to-list 'auto-mode-alist '("\\.cafein\\'" . cafemol-mode))
+(add-to-list 'auto-mode-alist '("\\.inp\\'" . cafemol-mode))
 ;; =============================================================================
 
 ;;; noinil.el ends here
