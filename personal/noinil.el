@@ -403,9 +403,9 @@
 (setq sml/shorten-directory t)
 (setq sml/shorten-modes t)
 ;; ---------- replace list ----------
-(add-to-list 'sml/replacer-regexp-list '("^~/Documents/noinil/journal/2015/" ":DIARY:") t)
-(add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/Documents/manuscripts/" ":MANUSCRIPT:") t)
-(add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/Documents/work_journal/" ":LOG:") t)
+(add-to-list 'sml/replacer-regexp-list '("^:Doc:noinil/journal/" ":DIARY:") t)
+(add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:manuscripts/" ":MANUSCRIPT:") t)
+(add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:work_journal/" ":LOG:") t)
 ;; =============================================================================
 
 
