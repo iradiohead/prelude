@@ -10,7 +10,7 @@
  '(top-mode w3m yasnippet dired+ tabbar-ruler
             page-break-lines emms hideshow-org
             google-translate indent-guide fold-this highlight-indentation
-            company-c-headers company-ghc company-math
+            company-c-headers company-ghc company-math smart-mode-line
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
@@ -389,6 +389,23 @@
 (require 'cafemol-mode)
 (add-to-list 'auto-mode-alist '("\\.cafein\\'" . cafemol-mode))
 (add-to-list 'auto-mode-alist '("\\.inp\\'" . cafemol-mode))
+;; =============================================================================
+
+
+;; =============================================================================
+;;                      _            _ _
+;;  _ __ ___   ___   __| | ___      | (_)_ __   ___
+;; | '_ ` _ \ / _ \ / _` |/ _ \_____| | | '_ \ / _ \
+;; | | | | | | (_) | (_| |  __/_____| | | | | |  __/
+;; |_| |_| |_|\___/ \__,_|\___|     |_|_|_| |_|\___|
+(sml/setup)
+(sml/apply-theme 'respectful)
+(setq sml/shorten-directory t)
+(setq sml/shorten-modes t)
+;; ---------- replace list ----------
+(add-to-list 'sml/replacer-regexp-list '("^~/Documents/noinil/journal/2015/" ":DIARY:") t)
+(add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/Documents/manuscripts/" ":MANUSCRIPT:") t)
+(add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/Documents/work_journal/" ":LOG:") t)
 ;; =============================================================================
 
 
