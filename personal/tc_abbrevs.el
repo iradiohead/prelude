@@ -118,4 +118,7 @@
 ;; stop asking whether to save newly added abbrev when quitting emacs
 (setq save-abbrevs nil)
 
+;; turn on abbrev mode globally
+(setq-default abbrev-mode t)
+
 ;;; tc_abbrevs.el ends here

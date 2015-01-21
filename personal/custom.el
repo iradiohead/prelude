@@ -8,21 +8,42 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (er/add-latex-mode-expansions (lambda nil (run-hooks (quote prelude-latex-mode-hook))) LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)) t)
+ '(LaTeX-mode-hook
+   (quote
+    (er/add-latex-mode-expansions
+     (lambda nil
+       (run-hooks
+        (quote prelude-latex-mode-hook)))
+     LaTeX-preview-setup smartparens-mode rainbow-delimiters-mode)))
  '(ac-etags-requires 1)
  '(calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"])
- '(calendar-chinese-location-name "南京")
+ '(calendar-chinese-location-name "京都")
  '(calendar-chinese-terrestrial-branch ["子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥"])
- '(calendar-latitude 32.060255)
- '(calendar-longitude 118.796877)
+ '(calendar-latitude 35.01)
+ '(calendar-longitude 135.47)
  '(calendar-week-start-day 1)
- '(erc-autojoin-channels-alist (quote (("freenode" "#archlinux-cn" "#emacs" "#rubik" "#physics"))))
+ '(column-number-mode t)
+ '(company-backends
+   (quote
+    (company-anaconda
+     (company-auctex-macros company-auctex-symbols company-auctex-environments)
+     company-auctex-bibs company-auctex-labels company-abbrev company-bbdb company-nxml company-css company-eclim company-semantic company-clang company-xcode company-ropemacs company-cmake company-capf
+     (company-dabbrev-code company-gtags company-etags company-keywords)
+     company-oddmuse company-files company-dabbrev)))
+ '(custom-safe-themes
+   (quote
+    ("c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" default)))
+ '(erc-autojoin-channels-alist
+   (quote
+    (("freenode" "#archlinux-cn" "#emacs" "#rubik" "#physics"))))
  '(erc-autojoin-mode t)
  '(erc-autojoin-timing (quote ident))
  '(erc-email-userid "noinil@gmail.com")
  '(erc-fill-mode t)
  '(erc-match-mode t)
- '(erc-modules (quote (autojoin button completion fill irccontrols list match menu move-to-prompt netsplit networks noncommands notify readonly ring services stamp spelling track truncate)))
+ '(erc-modules
+   (quote
+    (autojoin button completion fill irccontrols list match menu move-to-prompt netsplit networks noncommands notify readonly ring services stamp spelling track truncate)))
  '(erc-nick "oinil")
  '(erc-nickserv-passwords (quote ((freenode (("oinil" . "oionillingig"))))))
  '(erc-prompt "$ ERC =~~~~>")
@@ -46,11 +67,18 @@
  '(minimap-always-recenter t)
  '(minimap-width-fraction 0.15)
  '(minimap-window-location (quote right))
- '(org-agenda-files (quote ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
+ '(org-agenda-files
+   (quote
+    ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
  '(org-archive-location "~/Org/archive.org::* From %s")
  '(org-directory "~/Org")
- '(org-refile-targets (quote (("~/Org/someday.org" :maxlevel . 2) ("~/Org/gtd.org" :maxlevel . 2))))
+ '(org-refile-targets
+   (quote
+    (("~/Org/someday.org" :maxlevel . 2)
+     ("~/Org/gtd.org" :maxlevel . 2))))
+ '(size-indication-mode t)
  '(smartparens-global-mode t)
+ '(tool-bar-mode nil)
  '(track-eol t))
 
 (custom-set-faces
@@ -76,9 +104,9 @@
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
  '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
- '(font-latex-math-face ((t (:foreground "orange red"))) t)
- '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))) t)
- '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))) t)
+ '(font-latex-math-face ((t (:foreground "orange red"))))
+ '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
+ '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))))
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
@@ -97,6 +125,7 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "dark khaki"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "magenta"))))
- '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold)))))
+ '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold))))
+ '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
 
 ;;; custom.el ends here

@@ -7,10 +7,12 @@
 
 ;; auto installation of packages ===============================================
 (prelude-require-packages
- '(top-mode w3m yasnippet dired+ minimap auto-complete tabbar-ruler
-            page-break-lines emms gnuplot gnuplot-mode hideshow-org
-            google-translate ac-etags indent-guide figlet fold-this
-            highlight-indentation))
+ '(top-mode w3m yasnippet dired+ tabbar-ruler
+            page-break-lines emms hideshow-org
+            google-translate indent-guide fold-this highlight-indentation
+            company-c-headers company-ghc company-math smart-mode-line
+            ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
+            ))
 
 ;; associate files with modes ==================================================
 (add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
@@ -21,9 +23,7 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; set frame title =============================================================
-(setq frame-title-format '("" invocation-name " ::
-noinil@gmail.com :: Cheng Tan ::
-- " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
+(setq frame-title-format '("" invocation-name " --- " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;; set fontset and font ========================================================
 (create-fontset-from-fontset-spec
@@ -52,7 +52,7 @@ noinil@gmail.com :: Cheng Tan ::
 
   ;; (local-set-key (kbd "C-c C-p") nil) ; remove a key
 
-    ;; …
+  ;; …
   )
 
 ;; add to dired-mode-hook
@@ -67,20 +67,20 @@ noinil@gmail.com :: Cheng Tan ::
 ;; |  __/ | | | | | |
 ;;  \___|_|_| |_| |_|
 ;;
-(add-to-list 'load-path "/home/noinil/.eplugins/eim")
-(autoload 'eim-use-package "eim" "Another Emacs input method")
-(setq eim-use-tooltip nil)
+;; (add-to-list 'load-path "/home/noinil/.eplugins/eim")
+;; (autoload 'eim-use-package "eim" "Another Emacs input method")
+;; (setq eim-use-tooltip nil)
 
-(register-input-method
- "eim-wb" "euc-cn" 'eim-use-package
- "五笔" "汉字五笔输入法" "wb.txt")
-(register-input-method
- "eim-py" "euc-cn" 'eim-use-package
- "拼音" "汉字拼音输入法" "py.txt")
+;; (register-input-method
+ ;; "eim-wb" "euc-cn" 'eim-use-package
+ ;; "五笔" "汉字五笔输入法" "wb.txt")
+;; (register-input-method
+ ;; "eim-py" "euc-cn" 'eim-use-package
+ ;; "拼音" "汉字拼音输入法" "py.txt")
 
 ;; 用 ; 暂时输入英文
-(require 'eim-extra)
-(global-set-key ";" 'eim-insert-ascii)
+;; (require 'eim-extra)
+;; (global-set-key ";" 'eim-insert-ascii)
 ;;  ============================================================================
 
 ;; org-mode settings ===========================================================
@@ -141,52 +141,52 @@ noinil@gmail.com :: Cheng Tan ::
 ;;                                                |_|
 ;;
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(require 'auto-complete-config)
+;; (require 'auto-complete-config)
 ;; (require 'auto-complete-clang)
-(ac-config-default)
-(setq ac-auto-start 2)
-(setq ac-auto-show-menu 0.6)
-(setq ac-menu-height 10)
-(ac-set-trigger-key "TAB")
+;; (ac-config-default)
+;; (setq ac-auto-start 2)
+;; (setq ac-auto-show-menu 0.6)
+;; (setq ac-menu-height 10)
+;; (ac-set-trigger-key "TAB")
 
 ;; Personal sources.
 ;; Cheng Tan, 2013.
 
-(defun ac-ct-cpp-candidates ()
-  "Define my c++ ac-sources."
-  '("vector" "string"))
+;; (defun ac-ct-cpp-candidates ()
+;;   "Define my c++ ac-sources."
+;;   '("vector" "string"))
 
-(defvar ac-source-ct-cpp
-  '((candidates . ac-ct-cpp-candidates)))
+;; (defvar ac-source-ct-cpp
+;;   '((candidates . ac-ct-cpp-candidates)))
 
-(add-hook 'c++-mode-hook (lambda ()
-                           (add-to-list 'ac-sources 'ac-source-ct-cpp)))
+;; (add-hook 'c++-mode-hook (lambda ()
+;;                            (add-to-list 'ac-sources 'ac-source-ct-cpp)))
 
 ;; (add-hook 'c++-mode-hook (lambda () (add-to-list 'ac-sources
 ;;                            '(ac-source-ct-cpp ac-source-clang))))
 
 ;; latex-mode
-(add-to-list 'ac-modes 'latex-mode)
-(defun ac-latex-mode-setup ()
-  "Define ac-sources for my-latex-mode."
-  (add-to-list 'ac-sources '(ac-source-yasnippet)))
-(add-hook 'latex-mode-hook 'ac-latex-mode-setup)
+;; (add-to-list 'ac-modes 'latex-mode)
+;; (defun ac-latex-mode-setup ()
+;;   "Define ac-sources for my-latex-mode."
+;;   (add-to-list 'ac-sources '(ac-source-yasnippet)))
+;; (add-hook 'latex-mode-hook 'ac-latex-mode-setup)
 ;; -----------------------------------------------------------------------------
 
 ;; ac-etags
-(custom-set-variables '(ac-etags-requires 1))
+;; (custom-set-variables '(ac-etags-requires 1))
 
-(eval-after-load "etags"
-  '(progn
-     (ac-etags-setup)))
+;; (eval-after-load "etags"
+;;   '(progn
+;;      (ac-etags-setup)))
 
-(defun ct/c-mode-common-hook ()
-  "Define etag sources for ac in c or cpp modes."
-  (add-to-list 'ac-sources 'ac-source-etags))
+;; (defun ct/c-mode-common-hook ()
+;;   "Define etag sources for ac in c or cpp modes."
+;;   (add-to-list 'ac-sources 'ac-source-etags))
 
-(add-hook 'c-mode-common-hook 'ct/c-mode-common-hook)
-(add-hook 'c++-mode-hook 'ct/c-mode-common-hook)
-(add-hook 'f90-mode-hook 'ct/c-mode-common-hook)
+;; (add-hook 'c-mode-common-hook 'ct/c-mode-common-hook)
+;; (add-hook 'c++-mode-hook 'ct/c-mode-common-hook)
+;; (add-hook 'f90-mode-hook 'ct/c-mode-common-hook)
 
 ;; =============================================================================
 
@@ -198,12 +198,12 @@ noinil@gmail.com :: Cheng Tan ::
 ;; | || (_| | |_) | |_) | (_| | |    |_____| | |  | |_| | |  __/ |
 ;;  \__\__,_|_.__/|_.__/ \__,_|_|            |_|   \__,_|_|\___|_|
 ;;
+(require 'tabbar-ruler)
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
 ;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
 ;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
 ;; (setq tabbar-ruler-popup-scrollbar t) ;
-(require 'tabbar-ruler)
 ;; =============================================================================
 
 
@@ -274,7 +274,7 @@ noinil@gmail.com :: Cheng Tan ::
 ;;  \__, |_| |_|\__,_| .__/|_|\___/ \__|
 ;;  |___/            |_|
 ;;
-(require 'gnuplot-mode)
+;; (require 'gnuplot-mode)
 ;; =============================================================================
 
 ;; hide-show settings ==========================================================
@@ -332,6 +332,7 @@ noinil@gmail.com :: Cheng Tan ::
 (require 'indent-guide)
 (indent-guide-global-mode)
 (set-face-foreground 'indent-guide-face "cyan")
+;; (set-face-background 'indent-guide-face "#454945")
 ;; =============================================================================
 
 ;; highlight indentation =======================================================
@@ -357,16 +358,6 @@ noinil@gmail.com :: Cheng Tan ::
 (set-face-background 'highlight-indentation-face "#454945")
 ;; =============================================================================
 
-
-;; figlet ======================================================================
-;;   __ _      _     _
-;;  / _(_)__ _| |___| |_
-;; |  _| / _` | / -_)  _|
-;; |_| |_\__, |_\___|\__|
-;;       |___/
-;;
-(require 'figlet)
-;; =============================================================================
 
 ;; =============================================================================
 ;;   __       _     _   _   _     _
@@ -399,7 +390,24 @@ noinil@gmail.com :: Cheng Tan ::
 (require 'cafemol-mode)
 (add-to-list 'auto-mode-alist '("\\.cafein\\'" . cafemol-mode))
 (add-to-list 'auto-mode-alist '("\\.inp\\'" . cafemol-mode))
+;; =============================================================================
+
 
 ;; =============================================================================
+;;                      _            _ _
+;;  _ __ ___   ___   __| | ___      | (_)_ __   ___
+;; | '_ ` _ \ / _ \ / _` |/ _ \_____| | | '_ \ / _ \
+;; | | | | | | (_) | (_| |  __/_____| | | | | |  __/
+;; |_| |_| |_|\___/ \__,_|\___|     |_|_|_| |_|\___|
+(sml/setup)
+(sml/apply-theme 'respectful)
+(setq sml/shorten-directory t)
+(setq sml/shorten-modes t)
+;; ---------- replace list ----------
+(add-to-list 'sml/replacer-regexp-list '("^:Doc:noinil/journal/" ":DIARY:") t)
+(add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:manuscripts/" ":MANUSCRIPT:") t)
+(add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:work_journal/" ":LOG:") t)
+;; =============================================================================
+
 
 ;;; noinil.el ends here
