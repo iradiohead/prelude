@@ -29,6 +29,8 @@
 (create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
 (set-fontset-font "fontset-myfontset" 'han "Kaiti SC")
 (add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
+;; Colored output issues for shells ============================================
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; auto-load files =============================================================
 
