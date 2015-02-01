@@ -197,9 +197,11 @@
 ;; | || (_| | |_) | |_) | (_| | |    |_____| | |  | |_| | |  __/ |
 ;;  \__\__,_|_.__/|_.__/ \__,_|_|            |_|   \__,_|_|\___|_|
 ;;
-(require 'tabbar-ruler)
-(setq tabbar-ruler-global-tabbar t) ; If you want tabbar
-(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
+;; (require 'tabbar-ruler)
+;; (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
+;; (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
+;; --------- the above three lines cause errors sometimes ---------
+;; 
 ;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
 ;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
 ;; (setq tabbar-ruler-popup-scrollbar t) ;
@@ -214,7 +216,7 @@
 ;; |___/_| |_| |_|\__,_|_|   \__| | .__/ \__,_|_|  \___|_| |_|___/
 ;;                                            |_|
 ;;
-(require 'smartparens-config)
+;; (require 'smartparens-config) ;; already included in prelude-editor.el
 ;; =============================================================================
 
 
