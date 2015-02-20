@@ -7,7 +7,7 @@
 
 ;; auto installation of packages ===============================================
 (prelude-require-packages
- '(top-mode w3m yasnippet dired+ tabbar-ruler
+ '(top-mode w3m yasnippet dired+ ;; tabbar-ruler
             page-break-lines emms hideshow-org
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
@@ -201,7 +201,7 @@
 ;; (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 ;; (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
 ;; --------- the above three lines cause errors sometimes ---------
-;; 
+;;
 ;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
 ;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
 ;; (setq tabbar-ruler-popup-scrollbar t) ;
