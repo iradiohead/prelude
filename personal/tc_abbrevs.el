@@ -47,16 +47,9 @@
     ;; |_| |_|\___/|_|  |_| |_| |_|\__,_|_|  \___|_| |_|\__, |_|_|___/_| |_|
     ;;                                                  |___/
     ;;
-    ("4alt" "alternative")
-    ("4char" "character")
     ("4def" "definition")
-    ("4bg" "background")
-    ("4kb" "keyboard")
-    ("4ex" "example")
-    ("4kbd" "keybinding")
-    ("4env" "environment")
+    ("4ex" "for example,")
     ("4var" "variable")
-    ("4ev" "environment variable")
     ("4cp" "computer")
     ;; =========================================================================
 
@@ -81,10 +74,13 @@
     ("6mtd" "metadynamics")
     ("6cv" "collective variable")
     ("6cc" "conformational changes")
-    ("6MDs" "MD simulations")
-    ("6MD" "molecular dynamics")
+    ("6simu" "simulations")
+    ("6md" "molecular dynamics")
     ("6cg" "coarse-grained")
     ("6pca" "principle component analysis")
+    ("6int" "interactions")
+    ("6exv" "excluded volume")
+    ("6ele" "electrostatic")
 
     ("6h" "H$^{+}$")
     ("6na" "Na$^{+}$")
@@ -101,6 +97,48 @@
 
     ("6cl" "Cl$^{-}$")
 
+    ;; bibtex
+    ("7ac" "Angew. Chem.")
+    ("7arb" "Annu. Rev. Biochem.")
+    ("7arbbs" "Annu. Rev. Biophys. Biomol. Struct.")
+
+    ("7bj" "Biophys. J.")
+
+    ("7cpc" "ChemPhysChem")
+    ("7cpl" "Chem. Phys. Lett.")
+    ("7cshsqb" "Cold Spring Harbor Symp. Quant. Biol.")
+    ("7cbp" "Comp. Biochem. Physiol.")
+    ("7cbpb" "Comp. Biochem. Physiol. B")
+    ("7cpc" "Comput. Phys. Commun.")
+    ("7cosb" "Curr. Opin. Struct. Biol.")
+
+    ("7emboj" "EMBO J.")
+
+    ("7febsl" "FEBS Lett.")
+
+    ("7ge" "Gene Expr.")
+
+    ("7jacs" "J. Am. Chem. Soc.")
+    ("7jbc" "J. Biol. Chem.")
+    ("7jcp" "J. Chem. Phys.")
+    ("7jcomp" "J. Comput. Phys.")
+    ("7jmb" "J. Mol. Biol.")
+    ("7jpc" "J. Phys. Chem.")
+    ("7jpcb" "J. Phys. Chem. B")
+
+    ("7nb" "Nature Biotechnol.")
+    ("7ncb" "Nature Cell Biol.")
+    ("7ng" "Nature Genet.")
+    ("7nrmcb" "Nature Rev. Mol. Cell Biol.")
+    ("7nsb" "Nature Struct. Biol.")
+    ("7nar" "Nucleic Acids Res.")
+
+    ("7pre" "Phys. Rev. E")
+    ("7prl" "Phys. Rev. Lett.")
+    ("7pnas" "Proc. Natl. Acad. Sci. U.S.A.")
+    ("7ps" "Protein Sci.")
+    ("7psfg" "Proteins Struct. Funct. Genet.")
+
     ;; =========================================================================
 
     ;; emacs regex =============================================================
@@ -110,8 +148,8 @@
     ;; |  __/ | | | | | (_| | (__\__ \
     ;;  \___|_| |_| |_|\__,_|\___|___/
     ;;
-    ("7d" "\\([0-9]+?\\)")
-    ("7str" "\\([^\"]+?\\)\"")
+    ("9d" "\\([0-9]+?\\)")
+    ("9str" "\\([^\"]+?\\)\"")
     ;; =========================================================================
     ))
 
