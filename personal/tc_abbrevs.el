@@ -134,6 +134,7 @@
     ("7nar" "Nucleic Acids Res.")
 
     ("7pre" "Phys. Rev. E")
+    ("7pccp" "Phys. Chem. Chem. Phys.")
     ("7prl" "Phys. Rev. Lett.")
     ("7pnas" "Proc. Natl. Acad. Sci. U.S.A.")
     ("7ps" "Protein Sci.")
