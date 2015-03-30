@@ -8,7 +8,7 @@
 ;; auto installation of packages ===============================================
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ ;; tabbar-ruler
-            page-break-lines emms hideshow-org
+            page-break-lines emms hideshow-org lorem-ipsum
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
