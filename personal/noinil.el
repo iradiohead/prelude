@@ -29,6 +29,10 @@
 (create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
 (set-fontset-font "fontset-myfontset" 'han "Kaiti SC")
 (add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
+;; (set-fontset-font "fontset-default"
+;;                   'han
+;;                   (font-spec :family "Kaiti SC" :size 16))
+
 
 ;; auto-load files =============================================================
 
