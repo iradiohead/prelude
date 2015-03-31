@@ -26,13 +26,20 @@
 (setq frame-title-format '("" invocation-name " --- " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;; set fontset and font ========================================================
-(create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-myfontset")
-(set-fontset-font "fontset-myfontset" 'han "Kaiti SC")
-(add-to-list 'default-frame-alist '(font . "fontset-myfontset"))
-;; (set-fontset-font "fontset-default"
-;;                   'han
-;;                   (font-spec :family "Kaiti SC" :size 16))
+(create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-mac")
+(set-fontset-font "fontset-mac" 'han "Kaiti SC")
+(add-to-list 'default-frame-alist '(font . "fontset-mac"))
+;; (set-fontset-font "fontset-default" 'han "Heiti SC")
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font "fontset-default" 'han "Heiti SC"))
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font "fontset-mac" 'han "Kaiti SC"))
 
+(setq face-font-rescale-alist
+      '(
+        (".*Kaiti SC.*" . 1.1)
+        (".*Heiti SC.*" . 1.1)
+        ))
 
 ;; auto-load files =============================================================
 
