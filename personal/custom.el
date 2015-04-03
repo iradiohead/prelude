@@ -71,11 +71,19 @@
    (quote
     ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
  '(org-archive-location "~/Org/archive.org::* From %s")
+ '(org-default-notes-file "~/Org/notes.org")
  '(org-directory "~/Org")
  '(org-refile-targets
    (quote
     (("~/Org/someday.org" :maxlevel . 2)
      ("~/Org/gtd.org" :maxlevel . 2))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t)" "FEEDBACK(e!)" "VERIFY(j)" "STARTED(g!)" "|" "DONE(d!)")
+     (sequence "NEXT(n)" "SPECIFIED(i!)")
+     (sequence "SUBMITTED(s!)" "REVISION(v)" "|" "ACCEPTED(a!)" "PUBLISHED(p!)")
+     (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
+     (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)"))))
  '(size-indication-mode t)
  '(smartparens-global-mode t)
  '(tool-bar-mode nil)
@@ -111,7 +119,9 @@
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
  '(minimap-active-region-background ((t (:background "dark slate gray"))))
- '(org-done ((t (:foreground "green yellow" :weight bold :height 1.1))))
+ '(org-checkbox-statistics-done ((t (:inherit org-done))) t)
+ '(org-checkbox-statistics-todo ((t (:inherit org-todo))) t)
+ '(org-done ((t (:foreground "green yellow" :weight bold))))
  '(org-level-1 ((t (:foreground "yellow" :weight bold :height 1.2))))
  '(org-level-3 ((t (:foreground "#93D0E3"))))
  '(org-level-5 ((t (:foreground "indian red"))))

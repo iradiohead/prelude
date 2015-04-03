@@ -101,13 +101,6 @@
 ;;  \___/|_|  \__, |     |_| |_| |_|\___/ \__,_|\___|
 ;;            |___/
 ;;
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "FEEDBACK(e!)" "VERIFY(j)" "STARTED(g!)" "|" "DONE(d!)")
-        (sequence "NEXT(n)" "SPECIFIED(i!)")
-        (sequence "SUBMITTED(s!)" "REVISION(v)" "|" "ACCEPTED(a!)" "PUBLISHED(p!)")
-        (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
-        (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)")))
-(setq org-default-notes-file "~/Org/notes.org")
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
@@ -419,6 +412,21 @@
 (add-to-list 'sml/replacer-regexp-list '("^:Doc:noinil/journal/" ":DIARY:") t)
 (add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:manuscripts/" ":MANUSCRIPT:") t)
 (add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:work_journal/" ":LOG:") t)
+;; =============================================================================
+
+;; =============================================================================
+;; fixing the org \emsp problem
+(defun my-org-clocktable-indent-string (level)
+  "To fix the org emsp bug.  LEVEL is level in the table."
+  (if (= level 1)
+      ""
+    (let ((str "^"))
+      (while (> level 2)
+        (setq level (1- level)
+              str (concat str "--")))
+      (concat str "-> "))))
+
+(advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
 ;; =============================================================================
 
 
