@@ -420,7 +420,7 @@
   "To fix the org emsp bug.  LEVEL is level in the table."
   (if (= level 1)
       ""
-    (let ((str "^"))
+    (let ((str "|"))
       (while (> level 2)
         (setq level (1- level)
               str (concat str "--")))
