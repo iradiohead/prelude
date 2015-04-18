@@ -412,27 +412,6 @@
 (add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:work_journal/" ":LOG:") t)
 ;; =============================================================================
 
-
-;; =============================================================================
-;;                           _ _
-;;  ___  ___ _ __ ___   ___ | (_)_ __   __ _
-;; / __|/ __| '__/ _ \ / _ \| | | '_ \ / _` |
-;; \__ \ (__| | | (_) | (_) | | | | | | (_| |
-;; |___/\___|_|  \___/ \___/|_|_|_| |_|\__, |
-;;                                     |___/
-(defun my-scroll-up()
-  "Scroll the page while keeping the cursor in the current position"
-  (interactive)
-  (scroll-up 1))
-
-(defun my-scroll-down()
-  "Scroll the page while keeping the cursor in the current position"
-  (interactive)
-  (scroll-down 1))
-
-(global-set-key (kbd "M-n") 'my-scroll-up)
-(global-set-key (kbd "M-p") 'my-scroll-down)
-
 ;; =============================================================================
 ;; fixing the org \emsp problem
 (defun my-org-clocktable-indent-string (level)
