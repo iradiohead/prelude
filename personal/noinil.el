@@ -5,12 +5,15 @@
 
 ;;; code:
 
+(server-start)
+
 ;; auto installation of packages ===============================================
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ ;; tabbar-ruler
             page-break-lines emms hideshow-org lorem-ipsum
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
+            org-bullets
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
@@ -51,7 +54,6 @@
 ;; | |_| | ||  _ <| |___| |_| |
 ;; |____/___|_| \_\_____|____/
 ;;
-;; use dired+ mode instead of dired
 (require 'dired+)
 
 ;; redefine keys
@@ -113,6 +115,9 @@
          "* %?\n Taken at %T\n %i\n \n \n \n")
         ("j" "Journal" entry (file+datetree "~/Org/journal.org")
          "** %?\n Logged at %T\n %i\n \n \n \n")))
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 ;; =============================================================================
 
 
@@ -193,39 +198,7 @@
 
 ;; =============================================================================
 
-
-;; tabbar-ruler settings========================================================
-;;  _        _     _                                     _
-;; | |_ __ _| |__ | |__   __ _ _ __           _ __ _   _| | ___ _ __
-;; | __/ _` | '_ \| '_ \ / _` | '__|  _____  | '__| | | | |/ _ \ '__|
-;; | || (_| | |_) | |_) | (_| | |    |_____| | |  | |_| | |  __/ |
-;;  \__\__,_|_.__/|_.__/ \__,_|_|            |_|   \__,_|_|\___|_|
-;;
-;; (require 'tabbar-ruler)
-;; (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
-;; (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
-;; --------- the above three lines cause errors sometimes ---------
-;;
-;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
-;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
-;; (setq tabbar-ruler-popup-scrollbar t) ;
-;; =============================================================================
-
-
-;; smartparens mode settings ==================================================
-;;                           _
-;;  ___ _ __ ___   __ _ _ __| |_   _ __   __ _ _ __ ___ _ __  ___
-;; / __| '_ ` _ \ / _` | '__| __| | '_ \ / _` | '__/ _ \ '_ \/ __|
-;; \__ \ | | | | | (_| | |  | |_  | |_) | (_| | | |  __/ | | \__ \
-;; |___/_| |_| |_|\__,_|_|   \__| | .__/ \__,_|_|  \___|_| |_|___/
-;;                                            |_|
-;;
-;; (require 'smartparens-config) ;; already included in prelude-editor.el
-;; =============================================================================
-
-
-
-;; smartparens mode settings ===================================================
+;; emms mode settings ===================================================
 ;;   ___ _ __ ___  _ __ ___  ___
 ;;  / _ \ '_ ` _ \| '_ ` _ \/ __|
 ;; |  __/ | | | | | | | | | \__ \
@@ -271,16 +244,6 @@
             (toggle-truncate-lines 1)))
 ;; =============================================================================
 
-;; gnuplot mode settings =======================================================
-;;                          _       _
-;;   __ _ _ __  _   _ _ __ | | ___ | |_
-;;  / _` | '_ \| | | | '_ \| |/ _ \| __|
-;; | (_| | | | | |_| | |_) | | (_) | |_
-;;  \__, |_| |_|\__,_| .__/|_|\___/ \__|
-;;  |___/            |_|
-;;
-;; (require 'gnuplot-mode)
-;; =============================================================================
 
 ;; hide-show settings ==========================================================
 ;;  _     _     _            _
@@ -296,13 +259,6 @@
 (add-hook 'lisp-mode-hook 'hs-minor-mode)
 (add-hook 'sh-mode-hook 'hs-minor-mode)
 (add-hook 'python-mode-hook 'hs-minor-mode)
-
-;; (add-hook 'c-mode-hook 'hs-org/minor-mode)
-;; (add-hook 'c++-mode-hook 'hs-org/minor-mode)
-;; (add-hook 'emacs-lisp-mode-hook 'hs-org/minor-mode)
-;; (add-hook 'lisp-mode-hook 'hs-org/minor-mode)
-;; (add-hook 'sh-mode-hook 'hs-org/minor-mode)
-;; (add-hook 'python-mode-hook 'hs-org/minor-mode)
 
 ;; hs-org mode -----------------------------------------------------------------
 (require 'hideshow-org)
