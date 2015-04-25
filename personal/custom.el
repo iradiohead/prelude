@@ -64,6 +64,8 @@
  '(global-page-break-lines-mode t)
  '(global-visual-line-mode t)
  '(isearch-allow-scroll t)
+ '(mac-command-modifier (quote super))
+ '(mac-option-modifier (quote meta))
  '(minimap-always-recenter t)
  '(minimap-width-fraction 0.15)
  '(minimap-window-location (quote right))
