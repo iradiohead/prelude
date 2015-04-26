@@ -136,6 +136,8 @@
  '(italic ((t (:slant italic))))
  '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
  '(minimap-active-region-background ((t (:background "dark slate gray"))))
+ '(mode-line ((t (:background "gray19" :box (:line-width 1 :color "dark cyan")))))
+ '(mode-line-inactive ((t (:background "#383838" :box (:line-width 1 :color "gray23")))))
  '(org-checkbox-statistics-done ((t (:inherit org-done))) t)
  '(org-checkbox-statistics-todo ((t (:inherit org-todo))) t)
  '(org-done ((t (:foreground "green yellow" :weight bold))))
