@@ -39,6 +39,7 @@
  '(erc-autojoin-mode t)
  '(erc-autojoin-timing (quote ident))
  '(erc-email-userid "noinil@gmail.com")
+ '(erc-fill-column 120)
  '(erc-fill-mode t)
  '(erc-match-mode t)
  '(erc-modules
@@ -88,6 +89,8 @@
      (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)"))))
  '(size-indication-mode t)
  '(smartparens-global-mode t)
+ '(sml/pos-id-separator " ☛ ")
+ '(sml/pre-id-separator "✩")
  '(tool-bar-mode nil)
  '(track-eol t))
 
@@ -150,6 +153,10 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "dark khaki"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "magenta"))))
  '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold))))
+ '(sml/col-number ((t (:foreground "olive drab"))))
+ '(sml/line-number ((t (:foreground "yellow4"))))
+ '(sml/modes ((t (:foreground "yellow"))))
+ '(sml/numbers-separator ((t (:foreground "medium sea green"))))
  '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
 
 ;;; custom.el ends here

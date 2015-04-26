@@ -30,9 +30,7 @@
 
 ;; set fontset and font ========================================================
 (create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-mac")
-(set-fontset-font "fontset-mac" 'han "Kaiti SC")
 (add-to-list 'default-frame-alist '(font . "fontset-mac"))
-;; (set-fontset-font "fontset-default" 'han "Heiti SC")
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font "fontset-default" 'han "Heiti SC"))
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
@@ -43,6 +41,9 @@
         (".*Kaiti SC.*" . 1.1)
         (".*Heiti SC.*" . 1.1)
         ))
+
+;; line spacing
+(setq-default line-spacing 0.1)
 
 ;; auto-load files =============================================================
 
