@@ -5,6 +5,8 @@
 
 ;;; code:
 
+(server-start)
+
 ;; auto installation of packages ===============================================
 (prelude-require-packages
  '(top-mode w3m yasnippet dired+ tabbar-ruler
