@@ -85,11 +85,11 @@
 ;; (setq eim-use-tooltip nil)
 
 ;; (register-input-method
- ;; "eim-wb" "euc-cn" 'eim-use-package
- ;; "五笔" "汉字五笔输入法" "wb.txt")
+;; "eim-wb" "euc-cn" 'eim-use-package
+;; "五笔" "汉字五笔输入法" "wb.txt")
 ;; (register-input-method
- ;; "eim-py" "euc-cn" 'eim-use-package
- ;; "拼音" "汉字拼音输入法" "py.txt")
+;; "eim-py" "euc-cn" 'eim-use-package
+;; "拼音" "汉字拼音输入法" "py.txt")
 
 ;; 用 ; 暂时输入英文
 ;; (require 'eim-extra)
@@ -378,8 +378,8 @@
     (let ((str "|"))
       (while (> level 2)
         (setq level (1- level)
-              str (concat str "--")))
-      (concat str "-> "))))
+              str (concat str "~~")))
+      (concat str "~> "))))
 
 (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
 ;; =============================================================================
