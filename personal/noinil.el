@@ -17,13 +17,6 @@
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
-;; associate files with modes ==================================================
-(add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
-(add-to-list 'auto-mode-alist '("\\.gp\\'" . gnuplot-mode))
-(add-to-list 'auto-mode-alist '("\\.pdf\\'" . hexl-mode))
-
-;; mode-hook ===================================================================
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; set frame title =============================================================
 (setq frame-title-format '("" invocation-name " --- " (:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))))
@@ -384,5 +377,21 @@
 (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
 ;; =============================================================================
 
+
+;; =============================================================================
+;;         __ _                    _ _
+;;   __ _ / _| |_ ___ _ __    __ _| | |
+;;  / _` | |_| __/ _ \ '__|  / _` | | |
+;; | (_| |  _| ||  __/ |    | (_| | | |
+;;  \__,_|_|  \__\___|_|     \__,_|_|_|
+;;
+;; associate files with modes ==================================================
+(add-to-list 'auto-mode-alist '("\\.pdb\\'" . text-mode))
+(add-to-list 'auto-mode-alist '("\\.pdb\\'" . ruler-mode))
+(add-to-list 'auto-mode-alist '("\\.gp\\'" . gnuplot-mode))
+(add-to-list 'auto-mode-alist '("\\.pdf\\'" . hexl-mode))
+;; mode-hook ===================================================================
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+;; =============================================================================
 
 ;;; noinil.el ends here
