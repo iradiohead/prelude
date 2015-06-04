@@ -13,7 +13,7 @@
             page-break-lines emms hideshow-org lorem-ipsum
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
-            org-bullets
+            org-bullets vlf
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
