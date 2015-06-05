@@ -25,7 +25,7 @@
 (create-fontset-from-fontset-spec "-apple-Consolas-normal-normal-normal-*-13-*-*-*-m-0-fontset-mac")
 (add-to-list 'default-frame-alist '(font . "fontset-mac"))
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font "fontset-default" 'han "Heiti SC"))
+  (set-fontset-font "fontset-default" 'han "Kaiti SC"))
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font "fontset-mac" 'han "Kaiti SC"))
 
