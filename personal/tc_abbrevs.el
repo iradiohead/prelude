@@ -123,6 +123,7 @@
     ("7jcp" "J. Chem. Phys.")
     ("7jcomp" "J. Comput. Phys.")
     ("7jmb" "J. Mol. Biol.")
+    ("7jsb" "J. Struct. Biol.")
     ("7jpc" "J. Phys. Chem.")
     ("7jpcb" "J. Phys. Chem. B")
 
