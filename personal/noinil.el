@@ -13,7 +13,7 @@
             page-break-lines emms hideshow-org lorem-ipsum
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
-            org-bullets vlf
+            org-bullets vlf edit-server
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
@@ -360,6 +360,16 @@
 (add-to-list 'sml/replacer-regexp-list '("^:Doc:noinil/journal/" ":DIARY:") t)
 (add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:manuscripts/" ":MANUSCRIPT:") t)
 (add-to-list 'sml/replacer-regexp-list '("^:DB/Doc:work_journal/" ":LOG:") t)
+;; =============================================================================
+
+;; =============================================================================
+;;           _ _ _
+;;   ___  __| (_) |_      ___  ___ _ ____   _____ _ __
+;;  / _ \/ _` | | __|____/ __|/ _ \ '__\ \ / / _ \ '__|
+;; |  __/ (_| | | ||_____\__ \  __/ |   \ V /  __/ |
+;;  \___|\__,_|_|\__|    |___/\___|_|    \_/ \___|_|
+(require 'edit-server)
+(edit-server-start)
 ;; =============================================================================
 
 ;; =============================================================================
