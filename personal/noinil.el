@@ -13,7 +13,7 @@
             page-break-lines emms hideshow-org lorem-ipsum
             google-translate indent-guide fold-this highlight-indentation
             company-c-headers company-ghc company-math smart-mode-line
-            org-bullets vlf edit-server
+            org-bullets vlf edit-server polymode jekyll-modes
             ;; gnuplot gnuplot-mode minimap auto-complete ac-etags
             ))
 
@@ -385,6 +385,16 @@
       (concat str "~> "))))
 
 (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
+;; =============================================================================
+
+;; =============================================================================
+;;    _      _          _ _
+;;   (_) ___| | ___   _| | |
+;;   | |/ _ \ |/ / | | | | |
+;;   | |  __/   <| |_| | | |
+;;  _/ |\___|_|\_\\__, |_|_|
+;; |__/           |___/
+(require 'jekyll-modes)
 ;; =============================================================================
 
 
