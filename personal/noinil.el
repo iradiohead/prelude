@@ -98,17 +98,17 @@
 ;;            |___/
 ;;
 (define-key global-map "\C-cc" 'org-capture)
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
-         "* TODO %?\n %i\n \n \n \n")
-        ("i" "Idea" entry (file+headline "~/Org/notes.org" "Projects")
-         "* %?\n Caught on %T\n %i\n \n \n \n")
-        ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainment")
-         "* %?\n Watched on %T\n %i\n \n \n \n")
-        ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
-         "* %?\n Taken at %T\n %i\n \n \n \n")
-        ("j" "Journal" entry (file+datetree "~/Org/journal.org")
-         "** %?\n Logged at %T\n %i\n \n \n \n")))
+;; (setq org-capture-templates
+;;       '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
+;;          "* TODO %?\n %i\n \n \n \n \n")
+;;         ("i" "Idea" entry (file+headline "~/Org/notes.org" "Ideas")
+;;          "* %?\n Caught on %T\n %i\n \n \n \n \n")
+;;         ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainments")
+;;          "* %?\n Watched on %T\n %i\n \n \n \n \n")
+;;         ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
+;;          "* %?\n Taken at %T\n %i\n \n \n \n \n")
+;;         ("j" "Journal" entry (file+datetree "~/Org/journal.org")
+;;          "** %?\n Logged at %T\n %i\n \n \n \n \n")))
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))

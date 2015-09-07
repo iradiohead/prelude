@@ -72,8 +72,39 @@
  '(minimap-window-location (quote right))
  '(org-agenda-files
    (quote
-    ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/journal.org" "~/Org/records.org")))
+    ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/reading.org" "~/Org/journal.org" "~/Org/records.org")))
  '(org-archive-location "~/Org/archive.org::* From %s")
+ '(org-capture-templates
+   (quote
+    (("t" "Todo" entry
+      (file+headline "~/Org/gtd.org" "Tasks")
+      "* TODO %?
+ %i
+ " :empty-lines-before 2 :empty-lines-after 2)
+     ("i" "Idea" entry
+      (file+headline "~/Org/notes.org" "Ideas")
+      "* %?
+ Caught on %T
+ %i
+" :empty-lines-before 2 :empty-lines-after 2)
+     ("m" "Movie" entry
+      (file+headline "~/Org/notes.org" "Entertainments")
+      "* %?
+ Watched on %T
+ %i
+" :empty-lines-before 2 :empty-lines-after 2)
+     ("n" "Note" entry
+      (file+headline "~/Org/notes.org" "Notes")
+      "* %?
+ Taken at %T
+ %i
+ " :empty-lines-before 2 :empty-lines-after 2)
+     ("j" "Journal" entry
+      (file+datetree "~/Org/journal.org")
+      "** %?
+ Logged at %T
+ %i
+ " :empty-lines-before 1 :empty-lines-after 1))))
  '(org-default-notes-file "~/Org/notes.org")
  '(org-directory "~/Org")
  '(org-refile-targets
