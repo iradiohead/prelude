@@ -74,6 +74,7 @@
    (quote
     ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/reading.org" "~/Org/journal.org" "~/Org/records.org")))
  '(org-archive-location "~/Org/archive.org::* From %s")
+ '(org-bullets-bullet-list (quote ("🐭" "🐮" "🐯" "🐰" "🐲" "🐍" "🐴" "🐑" "🙉" "🐔" "🐶" "🐷")))
  '(org-capture-templates
    (quote
     (("t" "Todo" entry
@@ -104,7 +105,7 @@
       "** %?
  Logged at %T
  %i
- " :empty-lines-before 1 :empty-lines-after 1))))
+ " :empty-lines-before 0 :empty-lines-after 1))))
  '(org-default-notes-file "~/Org/notes.org")
  '(org-directory "~/Org")
  '(org-refile-targets
