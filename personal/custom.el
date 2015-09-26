@@ -106,6 +106,7 @@
  Logged at %T
  %i
  " :empty-lines-before 0 :empty-lines-after 1))))
+ '(org-cycle-level-faces nil)
  '(org-default-notes-file "~/Org/notes.org")
  '(org-directory "~/Org")
  '(org-refile-targets
